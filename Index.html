@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <title>To do List</title>
+</head>
+
+<body>
+    <div class="container-title">
+        <h1>To do List</h1>
+        <p>Raphael & Igor</p>
+    </div>
+
+    <div class="container-texto">
+        <p>(+) Para adicionar nova tarefa</p>
+        <p>(x) Para remover a tarefa</p>
+        <p>(v) Para marcar tarefa como concluída</p>
+    </div>
+
+    <div class="container-add">
+        <input type="text" name="" id="texto" placeholder="Digite aqui a tarefa">
+        <button class="add" onclick="add()"><span class="material-symbols-outlined">add_circle</span></button>
+    </div>
+
+    <div class="container-tarefas">
+        <div class="tarefas"></div>
+    </div>
+
+    <script>
+        function add() {
+            const newDiv = document.createElement('div');
+            const title = document.createElement('h2');
+            const text = document.getElementById('texto').value;
+
+            title.innerHTML = text;
+            newDiv.appendChild(title);
+
+            const newTask = document.querySelector('.tarefas');
+            newTask.appendChild(newDiv);
+
+            const removeButton = document.createElement('button');
+            removeButton.classList.add('remove-button');
+            removeButton.innerHTML = '<span class="material-symbols-outlined">cancel</span>';
+            removeButton.addEventListener('click', function () {
+                newDiv.remove();
+            });
+            newDiv.appendChild(removeButton);
+
+            const confirmButton = document.createElement('button');
+            confirmButton.classList.add('confirm-button');
+            confirmButton.innerHTML = '<span class="material-symbols-outlined">done</span>';
+            confirmButton.addEventListener('click', function () {
+                title.classList.add('line-through');
+            });
+            newDiv.appendChild(confirmButton);
+        }
+    </script>
+</body>
+
+</html>

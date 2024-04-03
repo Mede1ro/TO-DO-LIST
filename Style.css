@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Quicksand", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    background-color: #0b111c;
+}
+
+.container-title {
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #FFA500;
+}
+
+.container-title h1 {
+    font-size: 70px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+}
+
+.container-title p {
+    font-size: 30px;
+    letter-spacing: 3px;
+    margin-top: 20px;
+}
+
+.container-texto {
+    width: 400px;
+    height: 100px;
+    padding: 30px;
+    border-radius: 10px;
+    padding-inline-start: 40px;
+    font-size: 20px;
+    color: #FFAF45;
+    margin-top: 50px;
+    background-color: #7484a53a;
+}
+
+.container-texto p {
+    margin-bottom: 10px; 
+}
+
+.container-add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 50px;
+}
+
+.container-add input {
+    width: 400px;
+    height: 50px;
+    padding: 4px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+.container-add button {
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+}
+
+.container-add button span {
+    font-size: 50px;
+    color: #FFA500;
+}
+
+.remove-button {
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+}
+
+.remove-button button {
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center
+}
+
+.remove-button span {
+    font-size: 30px;
+    color: #FFA500;
+}
+
+.container-tarefas{
+    width: 500px;
+    height: 100%;
+    background-color: #7484a53a;
+    border-radius: 10px;
+    margin-top: 30px;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.container-tarefas::-webkit-scrollbar {
+    width: 10px; /* Largura da barra de rolagem */
+}
+
+.container-tarefas::-webkit-scrollbar-track {
+    background: #2e3440; /* Cor de fundo da barra de rolagem */
+}
+
+.container-tarefas::-webkit-scrollbar-thumb {
+    background-color: #4c566a; /* Cor do controle deslizante da barra de rolagem */
+    border-radius: 10px; /* Raio das bordas do controle deslizante */
+}
+
+.container-tarefas::-webkit-scrollbar-thumb:hover {
+    background-color: #434c5e; /* Cor do controle deslizante da barra de rolagem ao passar o mouse */
+}
+
+.tarefas {
+    margin-top: 50px;
+    width: 400px;
+    color: #fff;
+    overflow-wrap: break-word;
+}
+
+.remove-button,
+.confirm-button {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.remove-button span,
+.confirm-button span {
+    font-size: 30px;
+    color: #FFA500;
+}
+
+.line-through {
+    text-decoration: line-through;
+    color: #FFA500;
+}
